@@ -24,18 +24,19 @@ function getRandomIntInclusive(min, max) {
 	return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-String.prototype.ucfirst = function() {
-    return this.charAt(0).toUpperCase() + this.slice(1);
-};
-
 var generateHappyPass = function() {
-	$positiveWords = readDict("positive-words.txt");
+	String.prototype.ucfirst = function() {
+	    return this.charAt(0).toUpperCase() + this.slice(1);
+	};
+	$positiveWords = readDict(__dirname + "/positive-words.txt");
 	var ints = [ getRandomIntInclusive(1, $positiveWords.length), getRandomIntInclusive(1, $positiveWords.length) , getRandomIntInclusive(1, $positiveWords.length) ];
 	return $positiveWords[ints[0]].ucfirst() + $positiveWords[ints[1]].ucfirst() + getRandomIntInclusive(10, 999);
 };
 
-for(var x = 0; x < 99; x++)
-	console.log(generateHappyPass());
+// for(var x = 0; x < 99; x++)
+// 	console.log(generateHappyPass());
 
-module.generate = generateHappyPass;
+module.exports = {
+	generate: generateHappyPass
+};
 // console.log($s.length);

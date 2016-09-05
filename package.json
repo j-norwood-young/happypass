@@ -1,0 +1,11 @@
+{
+  "name": "happypass",
+  "version": "1.0.0",
+  "description": "A memorable password generator that uses only positive words",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jason Norwood-Young <jason@10layer.com>",
+  "license": "MIT"
+}

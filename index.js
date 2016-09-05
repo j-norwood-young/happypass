@@ -33,8 +33,7 @@ var generateHappyPass = function() {
 	return $positiveWords[ints[0]].ucfirst() + $positiveWords[ints[1]].ucfirst() + getRandomIntInclusive(10, 999);
 };
 
-// for(var x = 0; x < 99; x++)
-// 	console.log(generateHappyPass());
+// console.log(generateHappyPass());
 
 module.exports = {
 	generate: generateHappyPass

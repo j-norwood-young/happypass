@@ -1,4 +1,4 @@
-= A happy password generator =
+# A happy password generator #
 
 Uses positive words to generate a memorable password, in the format "WordWord999", where 999 is a number between 10 and 999. The words are selected from the list at https://github.com/jeffreybreen/twitter-sentiment-analysis-tutorial-201107/blob/master/data/opinion-lexicon-English/positive-words.txt, published by Jeffrey Breen under an Apache license. (For brevity, I've included just the file, which has more info in the header.)
 

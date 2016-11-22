@@ -1,6 +1,6 @@
 {
   "name": "happypass",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A memorable password generator that uses only positive words",
   "main": "index.js",
   "scripts": {

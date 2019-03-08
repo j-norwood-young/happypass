@@ -31,13 +31,15 @@ function getRandomIntInclusive(min, max) {
 	return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-String.prototype.ucfirst = function() {
+ucfirst = function() {
+	if (!this)
+		return "";
     return this.charAt(0).toUpperCase() + this.slice(1);
 };
 
 var generateHappyPass = function() {
 	var ints = [ getRandomIntInclusive(1, positiveWords.length), getRandomIntInclusive(1, positiveWords.length) , getRandomIntInclusive(1, positiveWords.length) ];
-	return positiveWords[ints[0]].ucfirst() + positiveWords[ints[1]].ucfirst() + getRandomIntInclusive(10, 999);
+	return ucfirst(positiveWords[ints[0]]) + ucfirst(positiveWords[ints[1]]) + getRandomIntInclusive(10, 999);
 };
 
 var generateAnimalPass = function() {

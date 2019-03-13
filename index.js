@@ -31,10 +31,10 @@ function getRandomIntInclusive(min, max) {
 	return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-ucfirst = function() {
-	if (!this)
+ucfirst = function(s) {
+	if (!s)
 		return "";
-    return this.charAt(0).toUpperCase() + this.slice(1);
+    return s.charAt(0).toUpperCase() + s.slice(1);
 };
 
 var generateHappyPass = function() {
